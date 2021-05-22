@@ -6,10 +6,10 @@ contacts = { }
 def menu():
     print("--------------------MENU----------------------")
     print("press 0 to look up an existing number.")
-    print("press 1 to add a Person to the contact book.")
-    print("press 2 to print all contacts")
-    print("press 3 to delete an existing number")
-    print("press 4 if you want to terminate program.")
+    print("press 1 to add a new contact to the contact book.")
+    print("press 2 to display all contacts")
+    print("press 3 to delete an existing contact")
+    print("press 4 if you want to terminate.")
     
     print("press any number from 6-9 to display Menu")
     print("----------------------------------------------")
@@ -27,7 +27,7 @@ def checkAlreadyExist(number,email):
             return 2    
     return 0
 
-def displayLast():
+#def displayLast():
     lastPerson=list(contacts.values())[len(contacts)-1]
     lastkey=list(contacts.keys())[len(contacts)-1]
     print(lastkey, ":",lastPerson)
@@ -80,11 +80,11 @@ while True:
             display()
         else:
             menu()
-    except Exception as e:
-        print(e)
-        print(e.with_traceback)
+    except :
+       
+       
         print("Invalid Command") 
-        print(e.with_traceback)   
+          
     
 
     
